@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "prepare": "husky install",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "lint": "eslint src --ext .ts --fix"
   },
   "keywords": [],
   "author": "",
@@ -14,10 +15,13 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
+    "@rocketseat/eslint-config": "^1.2.0",
     "@types/node": "^20.1.4",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.40.0",
     "husky": "^8.0.3",
+    "prisma": "^4.14.0",
     "tsx": "^3.12.7",
     "typescript": "^5.0.4"
   },
@@ -25,5 +29,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "@prisma/client": "4.14.0",
+    "fastify": "^4.17.0"
   }
 }
